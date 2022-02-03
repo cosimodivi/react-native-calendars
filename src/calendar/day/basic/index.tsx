@@ -177,10 +177,11 @@ export default class BasicDay extends Component<BasicDayProps> {
 
   renderMarking() {
     const {theme, markingType} = this.props;
-    const {marked, dotColor, dots, periods} = this.marking;
+    const {marked, dotColor, dots, periods, heartColor} = this.marking;
 
     return (
       <Marking
+        heartColor={heartColor}
         type={markingType}
         theme={theme}
         marked={this.isMultiDot() ? true : marked}
