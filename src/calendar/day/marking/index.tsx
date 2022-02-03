@@ -150,7 +150,15 @@ export default class Marking extends Component<MarkingProps> {
       color = selected && item.selectedDotColor ? item.selectedDotColor : item.color;
     }
 
-    return <Dot {...dotProps} key={key} color={color} />;
+    return (
+      <View style={{paddingTop:3}}>
+      {dotProps.selected && !this.props.heartColor && <Image source={require('../../../../../../app/assets/icons/cuorered.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+      {dotProps.marked && <Image source={require('../../../../../../app/assets/icons/cuorewhite.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+      {this.props.heartColor === "assenza" && <Image source={require('../../../../../../app/assets/icons/cuoreassenza.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+      {this.props.heartColor === "recupero" && <Image source={require('../../../../../../app/assets/icons/cuoregreen.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+   
+    </View>
+    );
   }
 
   render() {
