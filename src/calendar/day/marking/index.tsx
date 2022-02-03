@@ -1,7 +1,7 @@
 import filter from 'lodash/filter';
 
 import React, {Component} from 'react';
-import {View, ViewStyle, TextStyle, StyleProp} from 'react-native';
+import {View, ViewStyle, TextStyle, StyleProp, Image} from 'react-native';
 
 import {Theme, MarkingTypes} from '../../../types';
 import {shouldUpdate, extractComponentProps} from '../../../componentUpdater';
