@@ -153,13 +153,14 @@ export default class Marking extends Component<MarkingProps> {
     }
 
     return (
+
       <View style={{paddingTop:3}}>
-      {dotProps.selected && !this.props.heartColor && <Text style={{ fontFamily: "ZeroDue", fontSize: 17, color: "#e62630",alignSelf:"center" }}></Text>}
-      {dotProps.marked && <Text style={{ fontFamily: "ZeroDue", fontSize: 17, color: "#e62630",alignSelf:"center" }}></Text>}
-      {this.props.heartColor === "assenza" &&<Text style={{ fontFamily: "ZeroDue", fontSize: 17, color: "#e62630",alignSelf:"center" }}>🌴</Text>}
-      {this.props.heartColor === "recupero" && <Text style={{ fontFamily: "ZeroDue", fontSize: 17, color: "#2fac66",alignSelf:"center" }}></Text>}
-   
-    </View>
+      {dotProps.selected && !this.props.heartColor && <Image source={require('../../../../../../app/assets/icons/cuorered.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+      {dotProps.marked && <Image source={require('../../../../../../app/assets/icons/cuorewhite.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+      {this.props.heartColor === "assenza" && <Image source={require('../../../../../../app/assets/icons/cuoreassenza.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+      {this.props.heartColor === "recupero" && <Image source={require('../../../../../../app/assets/icons/cuoregreen.png')} style={{width:17, height:20, alignSelf:"center"}} resizeMode="contain"/>}
+
+      </View>
     );
   }
 
